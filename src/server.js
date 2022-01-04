@@ -2,10 +2,8 @@ const express = require('express');
 const favicon = require('serve-favicon');
 const path = require('path');
 
-/* eslint-disable no-unused-vars */
 const bodyParser = require('body-parser');
 const cors = require('cors');
-/* eslint-enable no-unused-vars */
 const axios = require('axios');
 const utils = require('./utils');
 require('dotenv').config();
@@ -16,6 +14,11 @@ const create = async () => {
     // server
     const app = express();
     app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
+
+    // cors and bodyparser for payload
+    app.use(bodyParser.urlencoded({extended : true}));
+    app.use(bodyParser.json());
+    app.use(cors())
     
     // Log request
     app.use(utils.appLogger);
