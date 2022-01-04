@@ -9,4 +9,5 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "appService.defaultWebAppToDeploy": "/subscriptions/1cea7c5d-df42-446a-9b1d-6a96cb9d9390/resourceGroups/AfghansInTech/providers/Microsoft.Web/sites/afghan-linkedin-api",
 }
